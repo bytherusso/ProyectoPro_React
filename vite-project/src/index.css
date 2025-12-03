@@ -80,3 +80,45 @@ td, th { border: 1px solid #555; padding: 4px; text-align: center; }
     width: 80px; height: 60px;
     display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;
 }
+
+/* ... MANTÉN TUS ESTILOS ANTERIORES ... */
+
+/* 1. MEJORA VISUAL: SELECCIÓN BRILLANTE */
+/* Cuando seleccionas un nodo, se pone borde blanco brillante */
+.react-flow__node.selected {
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 15px #00e676; /* Brillo verde neón */
+    z-index: 1000; /* Traer al frente */
+}
+
+/* Los cables seleccionados también brillan */
+.react-flow__edge.selected .react-flow__edge-path {
+    stroke: #00e676 !important;
+    stroke-width: 3px;
+}
+
+/* 2. BOTÓN DE BASURA FLOTANTE */
+.delete-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    z-index: 20;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.delete-btn:active {
+    transform: translateX(-50%) scale(0.9);
+    background: #b71c1c;
+}
