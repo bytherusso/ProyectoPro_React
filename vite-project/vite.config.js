@@ -4,5 +4,8 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // ¡Aquí no debe haber ninguna línea que diga "base"!
+  base: "/ProyectoPro_React/", // Tu nombre de repo
+  build: {
+    outDir: 'docs', // <--- ESTO ES LO NUEVO
+  }
 })
