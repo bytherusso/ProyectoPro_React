@@ -1,0 +1,82 @@
+body { margin: 0; background: #222; color: #fff; font-family: monospace; }
+
+/* Estilos de la Barra Lateral */
+.dndnode {
+  padding: 10px;
+  border: 1px solid #777;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: grab;
+  background: #333;
+  display: flex; align-items: center; justify-content: center;
+}
+.dndnode:hover { background: #444; border-color: #00e676; }
+
+/* --- FORMAS DE LAS COMPUERTAS EN EL LIENZO --- */
+
+/* AND: Cuadrada a la izquierda, redonda a la derecha */
+.react-flow__node[data-label*="AND"] {
+    background: #ffcc00;
+    border-radius: 0px 50px 50px 0px; /* Forma de D */
+    border: 2px solid #fff;
+    width: 80px; height: 60px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000;
+}
+
+/* OR: Redondeada suave */
+.react-flow__node[data-label*="OR"] {
+    background: #ff9800;
+    border-radius: 0px 50% 50% 0px; /* Curva de bala */
+    border: 2px solid #fff;
+    width: 80px; height: 60px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000;
+}
+
+/* NOT: Triángulo (Simulado con CSS simple por ahora) */
+.react-flow__node[data-label*="NOT"] {
+    background: #29b6f6;
+    border-radius: 50%; /* Círculo para simplificar */
+    width: 60px; height: 60px;
+    border: 2px solid #fff;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #000;
+}
+
+/* Inputs y Outputs */
+.react-flow__node-input { background: #fff; color: #000; border: 1px solid #777; width: 60px; text-align: center; font-weight: bold; }
+.react-flow__node-output { background: #00e676; color: #000; border: 2px solid #fff; width: 80px; text-align: center; font-weight: bold; }
+
+/* Tablas de resultados */
+table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 0.8em; }
+td, th { border: 1px solid #555; padding: 4px; text-align: center; }
+.res-1 { color: #0f0; } .res-0 { color: #777; }
+
+/* ... MANTÉN LO QUE YA TENÍAS Y AGREGA ESTO ... */
+
+/* NAND: Forma de AND pero color Rosa/Rojo */
+.react-flow__node[data-label*="NAND"] {
+    background: #e91e63;
+    border-radius: 0px 50px 50px 0px; /* Forma de D */
+    border: 2px solid #fff;
+    width: 80px; height: 60px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;
+}
+/* Simulamos la bolita de negación con un borde grueso a la derecha si quieres, 
+   o simplemente confiamos en el color y etiqueta */
+
+/* NOR: Forma de OR pero color Naranja Oscuro */
+.react-flow__node[data-label*="NOR"] {
+    background: #ff5722;
+    border-radius: 0px 50% 50% 0px; 
+    border: 2px solid #fff;
+    width: 80px; height: 60px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;
+}
+
+/* XNOR: Forma de XOR (circular/curva) pero Morado Oscuro */
+.react-flow__node[data-label*="XNOR"] {
+    background: #673ab7;
+    border-radius: 20px; /* Un poco más cuadrado que el circulo puro */
+    border: 2px solid #fff;
+    width: 80px; height: 60px;
+    display: flex; align-items: center; justify-content: center; font-weight: bold; color: #fff;
+}
